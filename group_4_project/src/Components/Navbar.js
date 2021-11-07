@@ -32,7 +32,10 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#" >Cart</a>
-          </li>         
+          </li> 
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/Users" >Login</a>
+        </li>        
         </ul>
         <div className="d-flex">
         <a className="navbar-brand" href="#" ><img src={login} className="img-fluid" /></a>
