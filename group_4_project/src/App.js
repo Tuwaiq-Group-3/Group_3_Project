@@ -5,6 +5,7 @@ import Products from './Components/Products'
 import Details from './Components/Details';
 import Wish from './Components/Wish';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Home from './Components/Home'
 import Login from './Components/Login'
 import Sign_up from './Components/Sign_up'
 import Cart from './Components/Cart';
@@ -17,7 +18,7 @@ function App() {
       <Navbar/>
 
       <Routes>
-      
+          {/* <Route exact path="/" element={<Home />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/sign_up" element={<Sign_up />} />
           <Route path="/products" element={<Products />} />
