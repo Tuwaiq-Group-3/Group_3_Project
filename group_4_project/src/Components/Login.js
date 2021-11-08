@@ -39,14 +39,18 @@ state.users.users.map((e)=>{
         dipatch(action)   
         console.log(" login yes: "+e.id);
         navigate("/products");
-    }else
-    console.log(" login Noooo");
+    }else{
+        setMatch(false);  
+        console.log(" login Noooo");
+    }
+   
 return <h1>hi user</h1>
 })
 
 }
 
 
+const [match, setMatch] = useState(true);
 
 
 
@@ -55,8 +59,8 @@ return (
     <div className="continer card text-center position-absolute top-50 start-50 translate-middle card_d">
     <form className="form   " id="login">
         <h1 className="form_title">Login</h1>
-        <div className="form_message form_message-error m-hidden ">invalid username or password combination</div>
-
+        <div  className={match ? "form_message form_message-error m-hidden " : "form_message form_message-error "}>invalid username or password combination</div>
+       
         <div className="form_input_group">
             <input type="text" className="form_input " id='userN' onChange={name} autoFocus placeholder='Username' required/>
             <div className="form_input_error-message"> </div>
