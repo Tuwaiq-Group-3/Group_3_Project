@@ -1,4 +1,3 @@
-# Group_4_Project
 # Online store 
 
 Site to display and sell products.
