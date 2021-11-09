@@ -190,7 +190,8 @@ grid-template-columns: 1fr 1fr;
     
     text-align: center;
 }
-
+.login{
+    margin: 4%;}
 
 .continer {
     width: 400px;
@@ -241,8 +242,6 @@ grid-template-columns: 1fr 1fr;
     display: grid;
     grid-template-columns:  50% 70%;
     grid-gap: 10px;
-    background-color: #2196F3;
-    /* padding: 10px; */
     margin-left: 10%;
     margin-right: 10%;
   }
