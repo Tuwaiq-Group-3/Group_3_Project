@@ -190,6 +190,33 @@ grid-template-columns: 1fr 1fr;
     
     text-align: center;
 }
+
+.badge {
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -15px; 
+  }
+
+.h_wish{
+    text-align: center;
+margin: 10%;
+}
+
 .login{
     margin: 4%;}
 

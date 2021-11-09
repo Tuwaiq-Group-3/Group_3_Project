@@ -24,14 +24,20 @@ const getProduct = (id) =>{
   }
 }
 
-  
-  return (
+ const result =() =>
+   wishState.wishList.find(obj => {
+  return obj.userId === loginState
+})
 
+  return (<>
+
+{wishState == undefined || productState.products.productsLis == undefined? '' :
+
+result() == undefined ?  <h1 className="h_wish">Your Wish List is empty</h1> :
         <div className="wish_div">
             <div className="card-group2 wish_card">
 
-  {   wishState == undefined || productState.products.productsLis == undefined? '' : 
-      wishState.wishList.map((element, index) => {
+  {   wishState.wishList.map((element, index) => {
         if(element.userId == loginState){
           return <Element props={getProduct(element.productId)}  key={index} /> 
         }
@@ -40,6 +46,8 @@ const getProduct = (id) =>{
             </div>
         </div>
 
+        }
+</>
   );
 
 

@@ -40,7 +40,7 @@ const getTotal =()=>{
   if(cartState == undefined || productState.products.productsLis == undefined ){ total = 0;return total;}
   
   for(let i = 0 ; i< cartState.cartList.length ; i++){
-      if(cartState.cartList[i].userId == 0){
+      if(cartState.cartList[i].userId == loginState){
           let x = getProduct(cartState.cartList[i].productId);
           total += x.price;
       }
@@ -98,8 +98,13 @@ if(collectionDelivery[e] !== undefined){
  } 
 
  let arr_products = [];
-
-    return (
+ const result =() =>
+ cartState.cartList.find(obj => {
+  return obj.userId === loginState
+})
+    return (<>
+    { cartState == undefined || productState.products.productsLis == undefined? '' :
+      result() == undefined ?  <h1 className="h_wish">Your Cart is empty</h1> : 
         <div className="div_cart">
             <h1 className="h_cart">Your Cart</h1>
             <hr/>
@@ -165,7 +170,7 @@ if(collectionDelivery[e] !== undefined){
 }}>Checkout </button></h6>
 
 
-        </div>
+        </div>}</>
     )
 }
 

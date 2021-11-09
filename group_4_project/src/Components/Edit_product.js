@@ -46,17 +46,7 @@ function Edit_product(props) {
     <input type="text" className="form-control" id="Image" placeholder={element.image} onChange={(e)=>{setImage(e.target.value)}}/>
 
      </div>
-      <div className="form-group"> 
 
-      <label className="lable_form" htmlFor="Category">Category:</label>
-    <select multiple className="form-control" id="Category"> 
-     <option value="mens clothing">Mens clothing</option>
-      <option value="womens clothing">Womens clothing</option> 
-      <option value="jewelery">Jewelery</option> 
-      <option value="electronics">Electronics</option> 
-      </select>
-      
-       </div> 
        <div className="form-group"> 
 
       <label className="lable_form" htmlFor="Description">Description:</label>
@@ -64,7 +54,7 @@ function Edit_product(props) {
 
        </div>
        
-        <p className="btn_form"><button type="button" className="btn btn-secondary" onClick={()=>{
+        <p className="btn_form"><button type="button" className="btn btn-secondary" onClick={()=>{          
           const x = {
             id:element.id,
             title:title,

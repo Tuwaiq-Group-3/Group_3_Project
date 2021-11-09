@@ -13,8 +13,8 @@ Amazon’s longstanding A-to-z Guarantee protects you when you buy items that ar
 
 We are continually looking for new ways to innovate for you, and this year we expanded our A-to-z Guarantee to include a process for resolving personal injury
 </p>
-<a href="https://twitter.com/" class="u0 text-primary"> Twitter </a>  |
-    <a href="https://www.instagram.com/" class="u0 text-primary"> Instagram</a>
+<a href="https://twitter.com/" className="u0 text-primary"> Twitter </a>  |
+    <a href="https://www.instagram.com/" className="u0 text-primary"> Instagram</a>
 
 
 </div>

@@ -9,10 +9,31 @@ import { useSelector } from "react-redux";
 
 
 function Navbar() {
+
+
+  const productState = useSelector((state) => {
+    return { products: state.productsReducer };});
+  
+  const cartState = useSelector((state) => {
+    return { cartList: state.CartListReducer.cartList.cartList };});
+
+
   const navigate = useNavigate();
   const loginState = useSelector((state) => {
     return  state.loginStateReducer;});
 
+
+    const result =() =>{
+      let count = 0;
+if(cartState == undefined || productState.products.productsLis == undefined ){return 0;}
+
+cartState.cartList.find(obj => {
+  if(obj.userId === loginState){
+    count++}
+
+})
+return count;
+}
 
   return (
     <div>
@@ -52,7 +73,13 @@ function Navbar() {
                 navigate("/login");}
                 else{
               navigate("/cart");}}} >Cart</a>
+
           </li> 
+
+          <li className="nav-item">
+          <i className="fa" >&#xf07a;</i>
+<span className='badge badge-warning' id='lblCartCount'> {result()} </span> 
+         </li> 
 
         </ul>
         <div className="d-flex">

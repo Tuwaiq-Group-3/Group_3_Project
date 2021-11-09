@@ -26,16 +26,16 @@ function Edit_product() {
  <div className="form-group"> 
 
  <label className="lable_form" htmlFor="Title">Title:</label> 
- <input type="text" className="form-control" id="Title" placeholder="New product"/> 
+ <input type="text" className="form-control" id="Title" placeholder="New product" onChange={(e)=>{setTitle(e.target.value)}}/> 
 
  </div> <div className="form-group">
 
   <label className="lable_form" htmlFor="Price">Price:</label> 
-  <input type="number" className="form-control" id="Price" placeholder="100$"/>
+  <input type="number" className="form-control" id="Price" placeholder="100$" onChange={(e)=>{setPrice(e.target.value)}}/>
 
    </div> <div className="form-group">
     <label className="lable_form" htmlFor="Image">Image:</label>
-    <input type="text" className="form-control" id="Image" placeholder="https://i.pravatar.cc"/>
+    <input type="text" className="form-control" id="Image" placeholder="https://i.pravatar.cc" onChange={(e)=>{setImage(e.target.value)}}/>
 
      </div>
       <div className="form-group"> 
@@ -43,8 +43,8 @@ function Edit_product() {
       <label className="lable_form" htmlFor="Category">Category:</label>
 
     <select multiple className="form-control" id="Category"> 
-     <option value="mens clothing">Mens clothing</option>
-      <option value="womens clothing">Womens clothing</option> 
+     <option selected value="men's clothing">Mens clothing</option>
+      <option value="women's clothing">Womens clothing</option> 
       <option value="jewelery">Jewelery</option> 
       <option value="electronics">Electronics</option> 
       </select>
@@ -53,7 +53,7 @@ function Edit_product() {
        <div className="form-group"> 
 
       <label className="lable_form" htmlFor="Description">Description:</label>
-       <textarea className="form-control" id="Description" rows="3"></textarea> 
+       <textarea className="form-control" id="Description" rows="3" onChange={(e)=>{setDescription(e.target.value)}}></textarea> 
 
        </div>
        
@@ -63,9 +63,9 @@ function Edit_product() {
             title:title,
             price:price,
             image:image,
-            category:"jewelery",
+            category:document.getElementById("Category").value,
             description:description,
-            rating:{rate:3.9,count:120}
+            rating:{rate:0,count:0}
           }
             dispatch(addNweProductToList(x))
             navigate("/products");
