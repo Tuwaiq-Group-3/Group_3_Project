@@ -1,28 +1,38 @@
+import { useNavigate } from 'react-router-dom';
 import jewellery from '../Img/jewellery.jpeg'
 import { useNavigate } from 'react-router-dom';
 import women from '../Img/women blouses.jpg'
-import men from '../Img/men.jpeg'
 import electronic from '../Img/electronic.jpg'
 import menHeader from '../Img/menHeader2.png'
 import wHeader from '../Img/wHeader.jpg'
 import jHeader from '../Img/jHeader.jpg'
 import online from '../Img/online.jpg'
+import men from '../Img/men.jpeg'
 import '../App.css';
 
 const Home = ()=>{
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2fd76e415ca1b61e5f9b8136f3f09a78f38c52c1
 
 return (
 <>
 
 <div id="myCarousel" className="carousel slide pointer-event slideshow" data-bs-ride="carousel">
     <div className="carousel-indicators">
+<<<<<<< HEAD
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" className="active" aria-current="true"></button>
+=======
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" className="active" aria-current="true"></button>
+>>>>>>> 2fd76e415ca1b61e5f9b8136f3f09a78f38c52c1
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className=""></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" className=""></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" className="" ></button>
     </div>
     <div className="carousel-inner">
+<<<<<<< HEAD
     <div className="carousel-item carousel-item-next carousel-item-start">
         <img className="d-block w-100 " src={online}  />
       </div>
@@ -31,6 +41,16 @@ return (
       </div>
       <div className="carousel-item active carousel-item-start">
       <img className="d-block w-100" src={menHeader}/>
+=======
+      <div className="carousel-item carousel-item-next carousel-item-start">
+        <img className="d-block w-100 " src={online}  />
+      </div>
+      <div className="carousel-item">
+        <img className="d-block w-100 " src={jHeader} />
+      </div>
+      <div className="carousel-item active carousel-item-start">
+        <img className="d-block w-100" src={menHeader}/>
+>>>>>>> 2fd76e415ca1b61e5f9b8136f3f09a78f38c52c1
       </div>
       <div className="carousel-item" >
         <img className="d-block w-100" src={wHeader} />
