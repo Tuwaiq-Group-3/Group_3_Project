@@ -27,8 +27,8 @@ function App() {
       axios.get('https://fakestoreapi.com/products')
     ])
     .then(r => {
-      
       dispatch(setList(r[0].data)); 
+      console.log(r[0].data);
        });
   
       }
