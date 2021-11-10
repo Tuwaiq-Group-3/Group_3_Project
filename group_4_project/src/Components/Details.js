@@ -87,9 +87,9 @@ function Details(props) {
 
 
   return (
-    <div className="Details position-relative " style={{minHeight: '150vh'}}>
+    <div className="Details_2 position-relative " style={{minHeight: '150vh'}}>
 
-<div className="card text-center position-absolute top-50 start-50 translate-middle card_d">
+<div className="card_d2">
       <div className="card-header">
         <h5>Description</h5>
       </div>
@@ -103,7 +103,7 @@ function Details(props) {
             {stars.map(
               (e, index) => <Star key={index} bool={e} />
             )}
-            <p className='card_price '>({product?.rating?.count} customer review)</p>
+            <p className='card_price '>({product?.rating?.count} Customer review)</p>
           </div>
           <p className="mt-4 p-1" style={{textAlign: 'left'}}>{product?.description}</p>        
 
@@ -119,13 +119,13 @@ function Details(props) {
       <div className='card_comment pb-4'>
         <h4 className='card_price d-flex p-4' >Add a review</h4>
         <div className='mb-4 d-flex p-4 card_price'>
-          <h5 className='card_price'>review*</h5>
+          <h5 className='card_price'>Review:</h5>
         {
           [0,0,0,0,0].map( (e,index) => <Star index={index} key={index} bool = { index < voteStars ? true : false}  vote={vote} />)
         }
         </div>
         <div className='mb-4 d-flex p-4 card_price'>
-          <h5 className='card_price'>comment</h5>
+          <h5 className='card_price'>Comment:</h5>
           <textarea  placeholder='What do you think of this product' value={input} onChange={(e) => setInput(e.target.value)} className='w-75'/>
         </div>  
         <button onClick = {() => addComment()} className='btn btn-secondary w-50' type='submit'>Review</button>

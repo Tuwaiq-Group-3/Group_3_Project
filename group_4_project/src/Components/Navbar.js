@@ -1,8 +1,11 @@
 import '../App.css';
 import icon from '../Img/icon.png'
 import login from '../Img/login.png'
+import {useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import { setLoginState } from '../reducers/loginState/actions';
+
 
 
 
@@ -10,6 +13,7 @@ import { useSelector } from "react-redux";
 
 function Navbar() {
 
+  const  dipatch=useDispatch();
 
   const productState = useSelector((state) => {
     return { products: state.productsReducer };});
@@ -22,6 +26,13 @@ function Navbar() {
   const loginState = useSelector((state) => {
     return  state.loginStateReducer;});
 
+    const userState =useSelector((state)=>{
+
+      return {
+          users:state.userReducer.users.users,
+      }
+          })
+
 
     const result =() =>{
       let count = 0;
@@ -33,6 +44,19 @@ cartState.cartList.find(obj => {
 
 })
 return count;
+}
+
+const userName =() =>{
+  let user = '';
+
+if(userState == undefined ){return '';}
+
+userState.users.find(obj => {
+if(obj.id === loginState){
+user =  obj.name;}
+
+})
+return user;
 }
 
   return (
@@ -83,8 +107,12 @@ return count;
 
         </ul>
         <div className="d-flex">
-        <a className="navbar-brand" onClick={()=>{navigate("/login");}}><img src={login} className="img-fluid"  /></a>
-
+        <a className="navbar-brand" onClick={()=>{navigate("/login");}}>{loginState === -1? '':'@'+userName()+"  "}<img src={login} className="img-fluid"  onClick={()=>{
+          const action = setLoginState(-1);  
+        dipatch(action);
+        navigate("/login");}}/></a>
+{/*         const action = setLoginState(e.id);  
+        dipatch(action)  */}
         </div>
       </div>
     </div>

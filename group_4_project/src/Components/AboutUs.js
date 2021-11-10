@@ -1,49 +1,70 @@
 import about from "../Img/about.jpg"
-
+import q1 from "../Img/q1.jpg"
+import inst from "../Img/inst.jpg"
+import tw from "../Img/tw.png"
+import face from "../Img/face.png"
 import '../App.css'
+
+
+
 
 function Aboutus()
 {
 
    return(
-<div>
-   <div>
+<div className="app">
+   <div className="app">
+   <h2 className="h_about" >About Us</h2>
 
    <img  className="item-img" src={about} width="100%" height="20%"/>
    </div>
-   <h2 className="h_about" >About Us</h2>
 
 <p className="h_about">
 The company mainly focuses on women's wear, and offers men's apparel, children's  accessories,  bags ,electronic device.
 <br/> G mainly targets  Middle East along with other consumer markets. 
 
 </p>
-<section className="about">
-<div className="main">
-   
-  {/* <img src={manuf}  /> */}
-  <hr className="hr_about"/>
+<hr />
 
-  <h5 className="h_about">Product Design</h5>
-  <p className="h_about"> all starts when an idea, or a thought, is conceived by the designer..</p>
-  <p className="h_about">The life of a product begins even before the designer's pen hits the paper.</p>
-</div>
 
-<div className="about-t">
-<hr className="hr_about"/>
 
-  <h5 className="h_about">customer service</h5>
-  <p className="h_about"> You may have questions, but we've got you covered. Our team of customer service professionals <br/>can communicate with you in the following languages: Englishand Arabic.
+<div className="app">
+   <h2 className="h_about" > Quality Assurance</h2>
+
+   <img  className="item-img" src={q1} />
+   </div>
+
+<p className="h_about">
+Te carry out quality inspection of all of our products before officially introducing them to the market. We check for style, color, sizing, workmanship, and quality, etc.<br/>
+ in order to eliminate any and all problems. We take measures to ensure that all of the cutting, sewing and ironing meet our quality requirements. There are ideal positions for each of these stages of production. Our workers follow guidebooks to ensure flawless appearance of the finalized product.
+
+
+
+
+
 </p>
-  
-</div>
-
-
-   </section>
 
 
 
-</div>
+<hr/>
+
+<div className="h_about">
+<h3> contact</h3>
+<a  href="https://twitter.com/" className="u0 text-primary">
+    <img  className="item-size" src={tw} /> </a>  
+
+
+  <a href="https://www.instagram.com/" className="u0 text-primary">
+  <img  className="item-size" src={inst} /> 
+  </a>
+
+  <a href="https://www.facebook.com/" className="u0 text-primary">
+  <img  className="item-sizze" src={face} /> 
+  </a>
+  </div> 
+    </div>
+
+
 
    ) 
 
