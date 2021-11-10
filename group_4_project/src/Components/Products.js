@@ -1,10 +1,9 @@
 import '../App.css';
 import { useState } from "react";
 import Element from './Element';
+
 import { useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-
-
 
 
 function Products() {
@@ -32,13 +31,30 @@ function Products() {
       return  state.loginStateReducer;});
 
 
+      let inputVal
+      const [inputValue,setValue]=useState();
+      
+      
+         const onChange=(e)=>{
+          inputVal=(e.target.value).toLowerCase()
+          console.log(inputVal);
+        }
+      
+        const onClick =(e)=>{
+         setValue(inputVal);
+        }
 
-
+        console.log(inputValue);
 
   return (
+    
+
     state.products.productsLis == undefined ? '' :
     <div className="d9">
-
+<div>
+    <input className="input1" type="text" onChange={onChange}  placeholder="Search.."/> 
+    <button className="searchBtn" onClick={onClick}> Search</button>
+    </div>
 <div id="div_filter">
 {/* ----------------------------------------------------------------- */}
 
@@ -199,16 +215,6 @@ function Products() {
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
         <div className="c">
             <div className="card-group2 products_card">
 
@@ -217,9 +223,16 @@ function Products() {
 
   {     state.products.productsLis == undefined ? '' : 
       state.products.productsLis.map((element, index) => {
-        if(i < showMore && filter.filter.Rating <= element.rating.rate &&( filter.filter.type == element.category || filter.filter.type == 'All') && filter.filter.Max >= element.price && filter.filter.Min <= element.price ){
+        if(element.title.toLowerCase().includes(inputValue)&&(inputValue.toLowerCase())){
+          console.log("in if");
+          return <Element props={element}  key={index} />}
+       if(i < showMore && filter.filter.Rating <= element.rating.rate &&( filter.filter.type == element.category || filter.filter.type == 'All') && filter.filter.Max >= element.price && filter.filter.Min <= element.price &&!inputValue){
         i++;
-        return <Element props={element}  key={index} />}})}
+        return <Element props={element}  key={index} />}
+        
+         
+        })}
+      
         {            loginState !== 0 ? '' : 
 <div>
 
@@ -251,8 +264,8 @@ function Products() {
 </div>
 
     </div>
+    
   );
-
 
 
 }
