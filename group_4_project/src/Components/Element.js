@@ -8,6 +8,7 @@ import { addCartList} from '../reducers/cart/actions'
 import {delProductList} from '../reducers/products/actions'
 import { useDispatch, useSelector } from "react-redux";
 import { editProductList } from '../reducers/products/actions';
+import {setProduct} from '../reducers/product/actions'
 
 
 function Element(props) {
@@ -70,8 +71,8 @@ function Element(props) {
           <div className="card-footer bo0" id="text1">
             <small className="text-muted" >
 
-            <button type="button" className="btn btn-outline-secondary btn-sm card_btn" onClick={()=>{
-            navigate("/Details/"+props.props.id);
+            <button type="button" className="btn btn-outline-secondary btn-sm card_btn" 
+              onClick={()=>{navigate("/Details/"+props.props.id); dispatch(setProduct(props.props))
             }}>Details</button>
             <button type="button" className="btn btn-outline-success btn-sm card_btn"  onClick={()=>{
         dispatch(addCartList(props.props.id,loginState));

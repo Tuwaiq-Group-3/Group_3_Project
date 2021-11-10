@@ -170,6 +170,17 @@ font-weight: bold;
 }
 .Details{
     height: 445px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+}
+.h_about{
+    text-align: center;
+}
+.hr_about{
+    margin: 1%;
+    margin-left: 6%;
+    margin-right: 6%;
 
 }
 .Details_btn{
