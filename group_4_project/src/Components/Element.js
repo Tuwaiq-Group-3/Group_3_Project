@@ -40,9 +40,9 @@ function Element(props) {
 
     
 <div className="card card_e">
-          <img className="card-img-top" src={props.props.image} alt="Card image cap card_e" height="1%"/>
+          <img className="card-img-top image-product" src={props.props.image} alt="Card image cap card_e" height="1%"/>
           <div className="card-body position-relative">
-            <h6 className="card-title title">{props.props.title}</h6>
+            <p className="card-title title ">{props.props.title}</p>
             <p className="position-absolute bottom-0 end-0 card_price">{props.props.price}$</p>
 {find(props.props.id , loginState) == 0 ? <img className="position-absolute bottom-0 start-0 card_img" id={props.props.id} src={Wish_List1} alt="Wish list" onClick={()=>{
   if(document.getElementById(props.props.id).src == Wish_List1){

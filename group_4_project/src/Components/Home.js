@@ -23,7 +23,7 @@ return (
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" className="" ></button>
     </div>
     <div className="carousel-inner">
-    <div className="carousel-item carousel-item-next carousel-item-start">
+    <div className="carousel-item carousel-item-next carousel-item-start" >
         <img className="d-block w-100 " src={online}  />
       </div>
       <div className="carousel-item">
@@ -50,15 +50,27 @@ return (
 <div>
     
     <div className='grid-container'>
+    <div className='item'>
     <img className='img womenImg' src={women} onClick={()=>{navigate("/products");}} />
-    <img className='img menImg' src={men} onClick={()=>{navigate("/products");}} />
-    <img className='img jewelleryImg' src={jewellery} onClick={()=>{navigate("/products");} }/>
-    <img className='img electronicImg' src={electronic}  onClick={()=>{navigate("/products");}}/>
-    </div>
     <p className='womenText'>Women Clothes </p>
+    </div>
+    <div className='item'>
+    <img className='img menImg' src={men} onClick={()=>{navigate("/products");}} />
     <p className='menText'>Men Clothes </p>
+    </div>
+    <div className='item'>
+    <img className='img jewelleryImg' src={jewellery} onClick={()=>{navigate("/products");} }/>
     <p className='jewelleryText'>Jewellery </p>
+    </div>
+    <div className='item'>
+    <img className='img electronicImg' src={electronic}  onClick={()=>{navigate("/products");}}/>
     <p className='electronicText'>Electronic </p>
+    </div>
+    </div>
+   
+
+   
+  
 
 </div>
 

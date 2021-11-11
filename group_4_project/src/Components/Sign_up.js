@@ -65,6 +65,8 @@ const [matchEmail, setEmail] = useState(true);
 const [userEmail,setUserEmail]=useState();
 
 return (
+    <div className="login2">
+
     <div className="Details position-relative login">
     <div className="continer card text-center position-absolute top-50 start-50 translate-middle card_d">
 
@@ -101,6 +103,7 @@ return (
 
     </form>
 
+</div>
 </div>
 </div>
 )

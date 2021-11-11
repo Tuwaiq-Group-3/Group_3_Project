@@ -38,11 +38,10 @@ function Products() {
          const onChange=(e)=>{
           inputVal=(e.target.value).toLowerCase()
           console.log(inputVal);
+          setValue(inputVal);
         }
       
-        const onClick =(e)=>{
-         setValue(inputVal);
-        }
+       
 
         console.log(inputValue);
 
@@ -51,9 +50,9 @@ function Products() {
 
     state.products.productsLis == undefined ? '' :
     <div className="d9">
-<div>
+<div className='search-bar'>
     <input className="input1" type="text" onChange={onChange}  placeholder="Search.."/> 
-    <button className="searchBtn" onClick={onClick}> Search</button>
+  
     </div>
 <div id="div_filter">
 {/* ----------------------------------------------------------------- */}
